@@ -7,9 +7,8 @@ import com.pixelmonmod.pixelmon.api.registries.PixelmonBlocks;
 import com.pixelmonmod.pixelmon.api.registries.PixelmonSpecies;
 import com.pixelmonmod.pixelmon.battles.attacks.EffectTypeAdapter;
 import me.ordalca.plaplates.init.AdvancedJudgment;
+import me.ordalca.plaplates.init.HisuianPlates;
 import me.ordalca.plaplates.init.ItemInit;
-import me.ordalca.plaplates.init.LegendPlateItem;
-import me.ordalca.plaplates.init.BlankPlateItem;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Direction;
 import net.minecraft.util.Tuple;
@@ -62,10 +61,10 @@ public class ModFile {
             if (event.pixelmon.level.getBlockState((BlockPos)data.getA()).getBlock() == PixelmonBlocks.timespace_altar.getBlock()) {
                 if (pokemon.getOwnerPlayer().inventory.getFreeSlot() != -1) {
                     if (pokemon.getFriendship() == 255 && !hasData("foundLegendPlate", pokemon)) {
-                        pokemon.getOwnerPlayer().inventory.add(ItemInit.getItem("plaplates:legend_plate"));
+                        pokemon.getOwnerPlayer().inventory.add(new ItemStack(HisuianPlates.legend_plate));
                         pokemon.getPersistentData().putBoolean("foundLegendPlate", true);
                     } else if (!hasData("foundBlankPlate", pokemon)) {
-                        pokemon.getOwnerPlayer().inventory.add(ItemInit.getItem("plaplates:blank_plate"));
+                        pokemon.getOwnerPlayer().inventory.add(new ItemStack(HisuianPlates.blank_plate));
                         pokemon.getPersistentData().putBoolean("foundBlankPlate", true);
                     }
                     event.setCanceled(true);
