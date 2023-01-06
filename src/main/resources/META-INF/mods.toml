@@ -1,0 +1,36 @@
+modLoader="javafml"
+loaderVersion="[36,)"
+license="MIT"
+
+[[mods]]
+modId="plaplates"
+version="1.0.0"
+displayName="PLA Plates"
+displayURL="https://github.com/Ordalca/PLAPlates"
+credits="Ordalca"
+authors="Ordalca"
+description='''
+Mod adding Blank and Legend Plates from Pokemon Legends: Arceus to Pixelmon.
+'''
+
+[[dependencies.modid]]
+    modId="forge"
+    mandatory=true
+    versionRange="[36,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.modid]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.16.5,1.17)"
+    ordering="NONE"
+    side="BOTH"
+
+
+[[dependencies.modid]]
+    modId="pixelmon"
+    mandatory=true
+    versionRange="[9.1.0,)"
+    ordering="NONE"
+    side="BOTH"
